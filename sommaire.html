@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Viewer avec jsTree</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.12/themes/default/style.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.12/jstree.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        main {
+            display: flex;
+            flex-grow: 1;
+            overflow: hidden;
+        }
+
+        #sidebar {
+            width: 500px;
+            padding: 10px;
+            border-right: 1px solid #ccc;
+            background: #f9f9f9;
+            height: 100%;
+            overflow-y: auto;
+            white-space: nowrap;
+        }
+
+        #content {
+            flex-grow: 1;
+            padding: 20px;
+            text-align: left;
+            overflow-y: auto;
+        }
+
+        #data_folder {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background: #fff;
+            min-height: 50px;
+        }
+
+        /* Custom style to change the folder icon color to blue */
+        .jstree-anchor > .jstree-icon.jstree-folder {
+            color: blue !important;
+        }
+
+        .jstree-anchor > .jstree-icon.jstree-folder:before {
+            color: blue !important;
+        }
+    </style>
+</head>
+<body>
+    <div id="header-placeholder"></div> <!-- Emplacement du header -->
+
+    <main>
+        <div id="sidebar">
+            <h3>Table des matières</h3>
+            <div id="jstree-container"></div>
+        </div>
+        <div id="content">
+            <h2>Contenu</h2>
+            <div id="data_folder"></div>
+        </div>
+    </main>
+
+    <script>
+        $(document).ready(function () {
+            $.getJSON("table_of_contents.json", function (data) {
+                function convertToJsTree(jsonData) {
+                    let result = [];
+                    if (!jsonData || !jsonData["Table des matières"]) {
+                        console.error("Erreur : La clé 'Table des matières' est introuvable dans le JSON");
+                        return result;
+                    }
+
+                    jsonData["Table des matières"].forEach((item) => {
+                        let key = Object.keys(item)[0];
+                        let value = item[key];
+                        let node = { "text": key, "data": {} };
+                        if (Array.isArray(value)) {
+                            node.children = convertToJsTree({"Table des matières": value});
+                        } else {
+                            node.text += " (Page: " + value + ")";
+                            node.data.page = value;
+                        }
+                        result.push(node);
+                    });
+                    return result;
+                }
+
+                let treeData = convertToJsTree(data);
+                $('#jstree-container').jstree({ 'core': { 'data': treeData } });
+
+                $('#jstree-container').on("select_node.jstree", function (e, data) {
+                    if (data.node.data.page) {
+                        $.get(data.node.data.page + '.html', function(response) {
+                            $('#data_folder').html(response);
+                        }).fail(function() {
+                            $('#data_folder').html('Erreur de chargement de la page');
+                        });
+                    } else {
+                        $('#data_folder').html('');
+                    }
+                });
+            }).fail(function () {
+                console.error("Erreur de chargement du fichier JSON");
+            });
+        });
+    </script>
+
+<script>
+    // Charger le header dynamiquement
+    fetch("header.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("header-placeholder").innerHTML = data;
+        })
+        .catch(error => console.error("Erreur de chargement du header:", error));
+</script>
+
+</body>
+</html>

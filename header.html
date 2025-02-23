@@ -1,0 +1,88 @@
+<header>
+    <style>
+    header {
+        background: linear-gradient(90deg, #031e4d, #0260ad);
+        color: white;
+        padding: 15px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 200px;
+        justify-content: space-between;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Added shadow */
+        animation: fadeIn 1s ease-out; /* Added fade-in animation */
+    }
+
+    .slogan {
+        font-size: 14px;
+        font-style: italic;
+        opacity: 0.8;
+        margin-top: 5px;
+    }
+
+    .menu-container {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .menu-btn {
+        padding: 10px 15px;
+        background: white;
+        color: #4960c4;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Button shadow */
+    }
+
+    .menu-btn:hover {
+        background: #dcdcdc;
+        transform: translateY(-3px); /* Added button hover effect */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Hover shadow effect */
+    }
+
+    /* Selected button style */
+    .menu-btn.selected {
+        background: #25c990;
+        color: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Same shadow as normal buttons */
+    }
+
+    /* Fade-in animation */
+    @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+    </style>
+
+    <div>📌 Atlas iconographique de l’épilepsie</div>
+
+    <div class="slogan">"Faculté de Médecine de Marrakech Service de Radiologie - Hôpital Ibn Tofail"</div>
+    <div class="menu-container">
+        <button class="menu-btn" onclick="location.href='index.html'">Accueil</button>
+        <button class="menu-btn" onclick="location.href='sommaire.html'">Sommaire</button>
+        <button class="menu-btn" onclick="location.href='introduction.html'">Introduction</button>
+        <button class="menu-btn" onclick="location.href='conclusion.html'">Conclusion</button>
+        <button class="menu-btn" onclick="location.href='bibliographie.html'">Bibliographie</button>
+        <button class="menu-btn" onclick="location.href='image_atlas.html'">Images Atlas</button>
+        <button class="menu-btn" onclick="location.href='contact.html'">Contact</button>
+    </div>
+</header>
+
+<script>
+function setSelected(button) {
+    // Remove 'selected' class from all buttons
+    const buttons = document.querySelectorAll('.menu-btn');
+    buttons.forEach(btn => btn.classList.remove('selected'));
+
+    // Add 'selected' class to the clicked button
+    button.classList.add('selected');
+}
+</script>

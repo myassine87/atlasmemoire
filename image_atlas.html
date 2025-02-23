@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affichage des images</title>
+    <style>
+        /* Galerie d'images */
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .image-gallery img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border: 2px solid #ccc;
+            cursor: pointer;
+        }
+
+        /* Style de la fenêtre modale (pop-up) */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Contenu de la modale */
+        .modal-content {
+            position: relative;
+            background-color: white;
+            border-radius: 10px;
+            padding: 10px;
+            max-width: 90%;
+            max-height: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Image dans la modale */
+        .modal img {
+            width: 100%;
+            max-width: 800px;
+            max-height: 80vh;
+            object-fit: contain;
+        }
+
+        /* Bouton de fermeture */
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: black;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="header-placeholder"></div> <!-- Emplacement du header -->
+
+    <h2>Galerie d'images</h2>
+    <div class="image-gallery" id="image-gallery"></div>
+
+    <!-- Fenêtre modale -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modal-image" src="" alt="Image agrandie">
+        </div>
+    </div>
+
+    <script>
+        // Définir le nombre total d'images dans le dossier
+        const totalImages = 16;
+        const galleryContainer = document.getElementById("image-gallery");
+
+        // Générer dynamiquement les images
+        for (let i = 1; i <= totalImages; i++) {
+            const img = document.createElement("img");
+            img.src = `images_atlas/${i}.jpg`;
+            img.alt = `Image ${i}`;
+            img.addEventListener('click', function() {
+                openModal(img.src);
+            });
+            galleryContainer.appendChild(img);
+        }
+
+        // Fonction pour ouvrir la fenêtre modale
+        function openModal(src) {
+            const modal = document.getElementById("myModal");
+            const modalImage = document.getElementById("modal-image");
+            modal.style.display = "flex";
+            modalImage.src = src;
+        }
+
+        // Fonction pour fermer la fenêtre modale
+        document.querySelector(".close").addEventListener("click", function() {
+            document.getElementById("myModal").style.display = "none";
+        });
+
+        // Fermer la modale si l'utilisateur clique en dehors de l'image
+        window.onclick = function(event) {
+            const modal = document.getElementById("myModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <script>
+        // Charger le header dynamiquement
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header-placeholder").innerHTML = data;
+            })
+            .catch(error => console.error("Erreur de chargement du header:", error));
+    </script>
+
+</body>
+</html>

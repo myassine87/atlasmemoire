@@ -1,0 +1,27 @@
+<div id="header-placeholder"></div> <!-- Emplacement du header -->
+<img src="logos/logoR.jpg" alt="">
+<p>Pr. ALJ Soumaya</p>
+<p>Professeur d'Enseignement Supérieur (PES)</p>
+<p>Université Cadi Ayyad</p>
+<p>Chef de Service de Radiologie</p>
+<p>Hôpital Ibn Tofail (HIT), Marrakech - Maroc</p>
+
+<p>Tel: +212 6 61 42 77 36</p>
+<p>e-mail: sasrhit2020@gmail.com</p>
+
+
+
+
+
+
+
+
+<script>
+    // Charger le header dynamiquement
+    fetch("header.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("header-placeholder").innerHTML = data;
+        })
+        .catch(error => console.error("Erreur de chargement du header:", error));
+</script>

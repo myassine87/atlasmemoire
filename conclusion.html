@@ -1,0 +1,17 @@
+<div id="header-placeholder"></div> <!-- Emplacement du header -->
+
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;line-height:150%;'><span style='font-family:"Garamond",serif;'>En conclusion, l&apos;imagerie joue un r&ocirc;le crucial dans la prise en charge de l&apos;&eacute;pilepsie. Les techniques d&apos;imagerie structurelle et fonctionnelle permettent une localisation pr&eacute;cise de la zone &eacute;pileptog&egrave;ne, ce qui peut conduire &agrave; une intervention chirurgicale curative chez les patients atteints d&apos;&eacute;pilepsie r&eacute;fractaire.</span></p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;line-height:150%;'><span style='font-family:"Garamond",serif;'>&nbsp;Le radiologue est un membre essentiel de l&apos;&eacute;quipe multidisciplinaire impliqu&eacute;e dans la prise en charge de ces patients. Il est important que les radiologues soient familiaris&eacute;s avec les techniques d&apos;imagerie avanc&eacute;es disponibles et sachent interpr&eacute;ter correctement les r&eacute;sultats pour aider &agrave; identifier la zone &eacute;pileptog&egrave;ne et &agrave; planifier la chirurgie.</span></p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;line-height:150%;'><span style='font-family:"Garamond",serif;'>&nbsp;De plus, l&apos;int&eacute;gration de l&apos;intelligence artificielle et de l&apos;apprentissage automatique dans l&apos;analyse des images pourrait permettre une meilleure pr&eacute;cision et une prise en charge plus personnalis&eacute;e des patients atteints d&apos;&eacute;pilepsie.&nbsp;</span></p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;line-height:150%;'><span style='font-family:"Garamond",serif;'>En d&eacute;finitive, une &eacute;troite collaboration entre les neurologues, les neurochirurgiens et les radiologues est indispensable pour assurer une prise en charge efficace et r&eacute;ussie de l&apos;&eacute;pilepsie.&nbsp;</span></p>
+
+
+<script>
+    // Charger le header dynamiquement
+    fetch("header.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("header-placeholder").innerHTML = data;
+        })
+        .catch(error => console.error("Erreur de chargement du header:", error));
+</script>

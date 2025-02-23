@@ -1,0 +1,280 @@
+{
+    "Table des matières": [
+        {
+            "I. Introduction": 5
+        },
+        {
+            "II. Données épidémiologiques": "5_1"
+        },
+        {
+            "III. Rappel histologique et anatomique": [
+                {
+                    "1. Histogenèse du cortex cérébral": "5_3"
+                },
+                {
+                    "2. Rappel anatomique": [
+                        {
+                            "2.1. Anatomie de l’encéphale": "8_1"
+                        },
+                        {
+                            "2.2. Circuit de Papez": "8_2"
+                        },
+                        {
+                            "2.3. Anatomie de l’hippocampe": 9
+                        },
+                        {
+                            "2.4. L’hippocampe et l’épilepsie": 13
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "IV. Présentation clinique de l’épilepsie": 14
+        },
+        {
+            "V. Nouvelle Classification de l’ILAE": [
+                {
+                    "1. Type de la crise": "15_1"
+                },
+                {
+                    "2. Type d’épilepsie": "15_2"
+                },
+                {
+                    "3. Syndromes épileptiques": 16
+                },
+                {
+                    "4. Nouvelles terminologies rapportées par la nouvelle classification": [
+                        {
+                            "4.1. Epilepsie autolimitée et pharmaco-sensible": "16_2"
+                        },
+                        {
+                            "4.2. Retrait de l’épilepsie généralisée idiopathique": "16_3"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "VI. Imagerie de l’épilepsie": [
+                {
+                    "1. IRM": "17_1"
+                },
+                {
+                    "A. Protocole HARNESS": "18"
+                },
+                {
+                    "B. Avantages du protocole HARNESS": "18_1"
+                },
+                {
+                    "C. Les séquences du protocole HARNESS": "18_2"
+                },
+                {
+                    "D. Comment les images IRM doivent être évaluées": [
+                        {
+                            "1. IRM": "19_1"
+                        },
+                        {
+                            "2. TDM": 20
+                        },
+                        {
+                            "3. Techniques complémentaires": [
+                                {
+                                    "A. IRM fonctionnelle": "20_2"
+                                },
+                                {
+                                    "B. Électroencéphalogramme combiné à l’IRM fonctionnelle": 21
+                                },
+                                {
+                                    "C. PET-Scann": "21_1"
+                                },
+                                {
+                                    "D. La tomographie par émission de photons simples (SPECT)": "21_2"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "VII. Etiologies de l’épilepsie": 22
+        },
+        {
+            "VIII. Atlas iconographique des étiologies de l’épilepsie": [
+                {
+                    "1. Sclérose Hippocampique": [
+                        {
+                            "1.1. Généralités": "24_2"
+                        },
+                        {
+                            "1.2. Présentation clinique": "24_3"
+                        },
+                        {
+                            "1.3. Etiologie": "24_4"
+                        },
+                        {
+                            "1.4. Imagerie": "24_5"
+                        },
+                        {
+                            "1.5. Etude volumétrique": 25
+                        },
+                        {
+                            "1.6. Avancées techniques": 26
+                        }
+                    ]
+                },
+                {
+                    "2. Tumeurs cérébrales": [
+                        {
+                            "2.1. DNET": 28
+                        },
+                        {
+                            "2.2. Gangliogliome": 29
+                        },
+                        {
+                            "2.3. Les Gliomes diffus de bas grade": 31
+                        },
+                        {
+                            "2.4. L’hamartome hypothalamique": 34
+                        }
+                    ]
+                },
+                {
+                    "3. Anomalie de développement cortical": [
+                        {
+                            "3.1. Classification des anomalies du développement cortical": "35_1"
+                        },
+                        {
+                            "3.2. Malformations par anomalie de la prolifération ou de l’apoptose neuronale": 36
+                        },
+                        {
+                            "3.3. Malformations par anomalie de la migration neuronale": 39
+                        },
+                        {
+                            "3.4. Malformations par anomalie de l’organisation corticale (post-migration)": 41
+                        }
+                    ]
+                },
+                {
+                    "4. Etiologies vasculaires": [
+                        {
+                            "4.1. Cavernome": "44_1"
+                        },
+                        {
+                            "4.2. Malformation Artério-Veineuse": 45
+                        }
+                    ]
+                },
+                {
+                    "5. Phacomatose": [
+                        {
+                            "5.1. La sclérose tubéreuse de Bourneville": "46_1"
+                        },
+                        {
+                            "5.2. Syndrome de Sturge Weber": 48
+                        },
+                        {
+                            "5.3. Neurofibromatose type 1 (Maladie de Von Recklinghausen)": 49
+                        }
+                    ]
+                },
+                {
+                    "6. Epilepsie d’origine séquellaire": [
+                        {
+                            "6.1. Post-traumatique": 51
+                        },
+                        {
+                            "6.2. Post-ischémique": 53
+                        },
+                        {
+                            "6.3. Post-infectieuse": 54
+                        }
+                    ]
+                },
+                {
+                    "7. Autres": [
+                        {
+                            "7.1. Syndrome de Dyke Daviddof Masson": "58_1"
+                        },
+                        {
+                            "7.2. Encéphalite de Rasmussen": 59
+                        },
+                        {
+                            "7.3. Status Epilepticus": 60
+                        },
+                        {
+                            "7.4. Kyste arachnoïdien": 61
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "IX. Chirurgie de l’épilepsie": [
+                {
+                    "1. Qui doit être référé pour une chirurgie de l'épilepsie ?": 62
+                },
+                {
+                    "2. Évaluation pré-chirurgicale": [
+                        {
+                            "A. Identification du foyer épileptique : Techniques non invasives": 63
+                        },
+                        {
+                            "B. Identification du foyer de crise : Techniques invasives": 65
+                        }
+                    ]
+                },
+                {
+                    "3. Conservation de la fonction cognitive et neurologique": 66
+                },
+                {
+                    "4. Procédures chirurgicales curatives": [
+                        {
+                            "4.1. Lésionectomie": "67_1"
+                        },
+                        {
+                            "4.2. Lobectomie": "67_2"
+                        },
+                        {
+                            "4.3. Hémisphérotomie": 68
+                        }
+                    ]
+                },
+                {
+                    "5. Procédures chirurgicales palliatives": [
+                        {
+                            "5.1. Section du corps calleux « La Callosotomie »": "68_2"
+                        },
+                        {
+                            "5.2. Transsection sub-piale multiple": 69
+                        }
+                    ]
+                },
+                {
+                    "6. Bénéfices et risques de la chirurgie": [
+                        {
+                            "6.1. Avantages potentiels": "69_2"
+                        },
+                        {
+                            "6.2. Risques": "69_3"
+                        }
+                    ]
+                },
+                {
+                    "7. Autres techniques et progrès réalisés": [
+                        {
+                            "7.1. Techniques de stimulation": 70
+                        },
+                        {
+                            "7.2. Progrès thérapeutiques": "70_1"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "X. Conclusion": 71
+        }
+    ]
+}
